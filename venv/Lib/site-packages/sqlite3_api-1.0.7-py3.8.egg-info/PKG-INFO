@@ -1,0 +1,64 @@
+Metadata-Version: 1.1
+Name: sqlite3-api
+Version: 1.0.7
+Summary: API for sqlite3
+Home-page: https://github.com/AlexDev-py/sqlite3-api.git
+Author: AlexDev
+Author-email: aleks.filiov@yandex.ru
+License: MIT
+Description: Installation
+        ------------
+        
+        Install from `PyPI <https://pypi.org/project/sqlite3-api>`_::
+        
+            pip install sqlite3-api
+        
+        
+        Install from `GitHub <https://github.com/AlexDev-py/sqlite3_api.git>`_::
+        
+            git clone https://github.com/AlexDev-py/sqlite3_api.git
+        
+        Create table classes
+        --------------------
+        
+        In file my_tables.py in the package folder, there is an instruction to create classes(in Russian language)
+        
+        Using
+        ------------
+        
+        Import file with tables::
+        
+            import my_tables
+        
+        Import package::
+        
+            import sqlite3_api
+        
+        Initiate the database::
+        
+            sql = sqlite3_api.API(my_tables, 'file_name.db')
+        
+        Create tables::
+        
+            sql.create_db()
+        
+        Getting data::
+        
+            table_name = 'test_table'
+            data = sql.filter(table_name)
+        
+        Sorting data::
+        
+            table_name = 'test_table'
+            data = sql.filter(table_name, field_name='value')
+        
+        
+        More information in the `example` folder in the package folder
+        
+        VK: `AlexDev <https://vk.com/sys.exit1>`_
+        
+        Mail: aleks.filiov@yandex.ru
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
